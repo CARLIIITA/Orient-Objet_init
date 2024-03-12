@@ -37,7 +37,7 @@ class Voiture2
     {
         return $this->marque = $marque;
     }
-    public function calculerDistance()
+    public function calculerDistance():string
     {
         return $this->vitesse * $this->temps . $this->unite;
     }

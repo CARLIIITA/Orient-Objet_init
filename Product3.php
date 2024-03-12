@@ -5,16 +5,20 @@
 //Modifier la visibilité des propriétés et faites une encapsulation grâce à des getter et setter.
 //finissez par instancier deux fois la classe et utilisez les méthodes précédemment créées pour modifier les valeurs de l’objet.
 
-class Product2
+class Product3
 
 {
-    private const UNITE = '€' ;
-    private string $title;
-    private float $price;
-    private int $quantity;
-
-
-    //ON AJOUTE PAS DE RETURN ICI CAR ON CONNAIS DEJA LA DONNEE 
+        private const UNITE = '€' ;
+        private string $title;
+        private float $price;
+        private int $quantity;
+  
+    public function __construct(string $title,float $price,int $quantity,)
+    {
+        $this->title = $title;
+        $this->price= $price;
+        $this->quantity = $quantity;
+    } 
     public function setTitle(string $title)
     {
         
@@ -39,7 +43,7 @@ class Product2
     {
         $this->quantity = $quantity;
     }
-    //ON AJOUTE UN RETURN ICI CAR  ON DEMANDE LA DONNEE  
+    //ON AJOUTE UN RETURN ICI CAR CAR ON DEMANDE LA DONNEE  
     public function getQuantity()
     {
         return $this->quantity;
@@ -62,7 +66,7 @@ class Product2
         }
     }
 }
-    $table = new Product2();
+    $table = new Product3('Red Table',500,0);
 
     $table->setTitle('Red Table');
     $table->setPrice(500);
